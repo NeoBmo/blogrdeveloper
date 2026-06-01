@@ -2,6 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/HeaderEmpty.astro";
+import ScrollSmootherInit from "../components/ScrollSmootherInit.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 
 type Props = CollectionEntry<"blog">["data"];
@@ -11,7 +12,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
 <html lang="es">
   <head>
-    <BaseHead title={title} description={description} />
+    <BaseHead title={title} description={description} image={heroImage} />
   </head>
   <body>
     <Header />
@@ -29,7 +30,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
               {
                 updatedDate && (
                   <div class="text-sm md:text-base italic flex items-center gap-2">
-                    <span class="text-pink-400/60">•</span>
+                    <span class="text-pink-400/60" aria-hidden="true">/</span>
                     <span>Actualizado: <FormattedDate date={updatedDate} /></span>
                   </div>
                 )
@@ -42,5 +43,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
         </div>
       </article>
     </main>
+    <ScrollSmootherInit />
   </body>
 </html>

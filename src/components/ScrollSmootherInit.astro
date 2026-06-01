@@ -1,0 +1,15 @@
+---
+// Este componente debe incluirse al final del body
+---
+
+<script>
+  import gsap from 'gsap';
+  import { ScrollSmoother } from 'gsap/ScrollSmoother';
+
+  gsap.registerPlugin(ScrollSmoother);
+
+  ScrollSmoother.create({
+    smooth: 2,
+    effects: true,
+  });
+</script>

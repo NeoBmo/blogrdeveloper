@@ -1,22 +1,18 @@
----
-progressValue: 0;
----
-
-<script>
+<script is:inline>
   const updateProgress = () => {
     const windowHeight = window.innerHeight;
     const documentHeight = document.documentElement.scrollHeight - windowHeight;
     const scrollTop = window.scrollY;
-    const scrollPercentage = (scrollTop / documentHeight) * 100;
+    const scrollPercentage = documentHeight > 0 ? (scrollTop / documentHeight) * 100 : 0;
     const progressValue = Math.min(100, Math.max(0, scrollPercentage));
     document.documentElement.style.setProperty(
       "--progressValue",
       `${progressValue}%`
     );
   };
-  $: {
-    window.addEventListener("scroll", updateProgress);
-  }
+  updateProgress();
+  window.addEventListener("scroll", updateProgress, { passive: true });
+  window.addEventListener("resize", updateProgress);
   window.addEventListener("load", updateProgress);
 </script>
 
