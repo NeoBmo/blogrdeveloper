@@ -1,24 +1,44 @@
-# Astro Starter Kit: Blog
+# Blog RockOraboloco 🚀
 
-``` bash
-npm create astro@latest -- --template blog
+Un blog personal sobre **aprendizaje efectivo y autodidactismo**, construido con [Astro](https://astro.build), React, y Tailwind CSS.
+
+## 📋 Características
+
+- ✨ Generación estática rápida con Astro v6
+- 🎨 Diseño responsivo con Tailwind CSS v3
+- 📱 Optimizado para SEO
+- ⚡ Animaciones con GSAP
+- 📝 Contenido basado en Markdown/MDX
+
+## 🛠️ Stack Tecnológico
+
+- **Astro 6.4.2** - SSG framework
+- **React 19.2.6** - Componentes interactivos
+- **TypeScript** - Type safety
+- **Tailwind CSS 3.3** - Estilos
+- **GSAP 3.12** - Animaciones
+- **MDX** - Markdown con componentes React
+
+## 📖 Estructura del Proyecto
+
+``` dash
+src/
+├── content/
+│   ├── blog/          # Artículos del blog
+│   └── config.ts      # Schema de colecciones
+├── components/        # Componentes Astro/React
+├── layouts/           # Layouts reutilizables
+├── pages/             # Rutas públicas
+├── styles/            # CSS personalizado
+└── consts.ts          # Constantes
 ```
 
-![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
+## 📜 Licencia
 
-## Commands
+Proyecto personal - uso privado
 
-All commands are run from the root of the project, from a terminal:
+## 📚 Recursos
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-### Want to learn more?
-
-Check out [our documentation](https://docs.astro.build)
+- [Documentación Astro](https://docs.astro.build)
+- [Documentación Tailwind](https://tailwindcss.com)
+- [Documentación React](https://react.dev)

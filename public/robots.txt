@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /.env
+Disallow: /.git
+
+Sitemap: https://blogrdeveloper.com/sitemap-index.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1

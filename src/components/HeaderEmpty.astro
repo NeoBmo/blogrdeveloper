@@ -1,28 +1,19 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
 import logo from "../../public/logo.png";
-import Progress from "./Progress.astro";
+import Progress from "../ui/Progress.astro";
 ---
 
-<header class="w-screen px-2 z-10 fixed top-0 bg-black/50 backdrop-blur-sm">
-  <nav class="py-2 flex align-center justify-between">
-    <img class="w-8 h-8 my-auto mx-0" src={logo.src} alt="Logo de Rdeveloper" />
-    <div>
+<header class="w-screen px-3 z-10 fixed top-0 bg-black/50 backdrop-blur-md border-b border-pink-400/20 transition-all duration-300">
+  <nav class="py-3 flex items-center justify-between max-w-6xl mx-auto">
+    <img
+      class="w-9 h-9 hover:scale-110 transition-transform duration-300 cursor-pointer"
+      src={logo.src}
+      alt="Logo de Rdeveloper"
+    />
+    <div class="flex gap-1 md:gap-3 items-center">
       <HeaderLink href="/blog">Volver</HeaderLink>
     </div>
   </nav>
   <Progress />
 </header>
-<style>
-  nav a {
-    padding: 0.25rem 0.75rem;
-    color: var(--white);
-    border-bottom: 2px solid var(--pink);
-    text-decoration: none;
-    border-radius: 0.5rem;
-    background-color: #00000080;
-  }
-  nav a:hover {
-    color: var(--pink);
-  }
-</style>
