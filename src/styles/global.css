@@ -21,7 +21,6 @@
 html {
   background-color: var(--black);
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -38,13 +37,6 @@ body {
 ::selection {
   background-color: #f472b6;
   color: #ffffff;
-}
-
-main {
-  width: 90%;
-  height: fit-content;
-  margin: auto;
-  padding: 2rem 0;
 }
 
 a {
